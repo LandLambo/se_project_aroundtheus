@@ -1,6 +1,5 @@
 .footer {
   gap: 0px;
-  opacity: 0px;
 }
 
 .footer__copyright {
@@ -12,4 +11,5 @@
   color: #545454;
   padding-top: 67px;
   padding-bottom: 60px;
+  margin: 0;
 }
