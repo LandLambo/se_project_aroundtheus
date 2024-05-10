@@ -38,3 +38,8 @@
   height: 18px;
   border: none;
 }
+
+.card__title-subtitle {
+  width: 219px;
+  height: 29px;
+}
