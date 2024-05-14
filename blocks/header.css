@@ -1,3 +1,9 @@
 .header {
   margin-top: 45px;
 }
+
+.header__image::after {
+  border: 1px solid rgba(84, 84, 84, 0.7);
+  content: url(../images/Line.svg);
+  border: 1px 0px 0px 0px;
+}
