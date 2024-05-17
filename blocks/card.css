@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  border-radius: 10px;
   overflow: hidden;
+  border-radius: 10px;
+  width: 282px;
+  height: 361px;
 }
 
 .card__title {
@@ -15,6 +17,9 @@
   white-space: nowrap;
   overflow: hidden;
   margin-bottom: 0;
+  margin-top: 0;
+  text-align: left;
+  max-width: 93%;
 }
 
 .card__image {
@@ -29,7 +34,6 @@
   padding: 25px 20px 25px 20px;
   align-items: center;
   justify-content: space-between;
-  border-radius: 10px;
 }
 
 .card__like-button {
@@ -39,7 +43,7 @@
   border: none;
 }
 
-.card__title-subtitle {
-  width: 219px;
-  height: 29px;
+.card__like-button:hover {
+  opacity: 50%;
+  cursor: pointer;
 }
