@@ -20,11 +20,23 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Good luck and have fun!
 
+**Project Name**
+
+se_project_aroundtheus
+
+**project descripition**
+
+This was my project 3 assingment, in the project we had to create a websitefrom scratch, we created cards using flex direction and using grid. I also used media queries for the first time.
+
+**list of technologies used**
+
+Figma
+VS Code
+
+**video overview**
+
 https://drive.google.com/file/d/19PBbDF-EcIn1pCtAmCjO1Fa0YxdBBfNU/view?usp=sharing
 
-Project Name: se_project_aroundtheus
+**github link**
 
-project descripition: This was my project 3 assingment, in the project we had to create a websitefrom scratch, we created cards using
-flrc direction and using grid. I also used media queries for the first time.
-
-list of technologies used: We got our mark up from figma.
+https://github.com/LandLambo/se_project_aroundtheus.git
