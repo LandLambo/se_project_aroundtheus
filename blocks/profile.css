@@ -98,9 +98,6 @@
 }
 
 @media screen and (max-width: 620px) {
-  .profile {
-    flex-direction: column;
-  }
   .profile__info {
     display: flex;
     flex-wrap: wrap;
