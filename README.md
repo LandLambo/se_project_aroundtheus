@@ -36,3 +36,5 @@ VS Code
 **video overview**
 
 https://drive.google.com/file/d/19PBbDF-EcIn1pCtAmCjO1Fa0YxdBBfNU/view?usp=sharing
+
+https://landlambo.github.io/se_project_aroundtheus/
