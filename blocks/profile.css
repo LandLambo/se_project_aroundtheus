@@ -30,6 +30,7 @@
   margin-left: auto;
   border-style: solid;
   border: 2px rgba(255, 255, 255, 1);
+  border-radius: 2px;
 }
 
 .profile__add-button:hover {
