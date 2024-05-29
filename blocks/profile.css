@@ -16,6 +16,8 @@
   width: 24px;
   grid-area: button;
   border: 1px solid rgba(255, 255, 255, 1);
+  margin-top: 37px;
+  border: 1px 0px 0px 0px;
 }
 
 .profile__edit-button:hover {
@@ -31,6 +33,7 @@
   border-style: solid;
   border: 2px rgba(255, 255, 255, 1);
   border-radius: 2px;
+  margin-top: 35px 0 0 0;
 }
 
 .profile__add-button:hover {
@@ -40,18 +43,22 @@
 
 .profile__title {
   grid-area: title;
-  margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 48px;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 373px;
+  height: 48px;
+  padding-bottom: 7px;
+  margin: 22px 0 0 0;
 }
 
 .profile__description {
+  top: 236px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
@@ -61,10 +68,8 @@
   white-space: nowrap;
   overflow: hidden;
   font-family: "Inter", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.78px;
   text-align: left;
+  width: 415px;
 }
 
 .profile__image {
@@ -73,10 +78,10 @@
   border-radius: 50%;
   object-fit: cover;
   background-position: center;
-  margin-right: 24px;
+  margin-right: 30px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .profile {
     flex-direction: column;
   }
@@ -94,13 +99,8 @@
 }
 
 @media screen and (max-width: 620px) {
-  .profile {
-    padding-top: 42px;
-  }
-
   .profile__title {
     grid-area: title;
-    margin-right: 10px;
     font-family: "Inter", Arial, sans-serif;
     font-size: 22px;
     font-weight: 500;
@@ -109,7 +109,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-bottom: 14px;
+    padding: 14px;
+    padding-right: 10px;
+    padding-top: 30px;
+    margin: 0;
   }
 
   .profile__edit-button {
@@ -118,6 +121,11 @@
     height: 18px;
     grid-area: button;
     border: 1px solid rgba(255, 255, 255, 1);
+    width: 18px;
+    height: 18px;
+    top: 280px;
+    left: 268px;
+    border: 1px 0px 0px 0px;
   }
 
   .profile__edit-button:hover {
@@ -131,6 +139,7 @@
     width: 282px;
     border-radius: 2px;
     margin: 0px;
+    padding-top: 36px;
   }
 
   .profile__add-button:hover {
@@ -155,9 +164,9 @@
   .profile__image {
     width: 120px;
     height: 120px;
-    margin-bottom: 26.25px;
     border-radius: 50%;
     object-fit: cover;
     background-position: center;
+    margin: 0;
   }
 }
