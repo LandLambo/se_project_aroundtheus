@@ -8,6 +8,7 @@
   display: grid;
   grid-template-areas: "title button" "description description";
   grid-template-columns: minmax(auto, 375px) auto;
+  align-items: center;
 }
 
 .profile__edit-button {
@@ -51,7 +52,7 @@
   overflow: hidden;
   max-width: 373px;
   padding-bottom: 7px;
-  margin: 22px 0 0 0;
+  margin: 0;
 }
 
 .profile__description {
@@ -106,6 +107,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-right: 10px;
   }
 
   .profile__edit-button {
@@ -114,10 +116,6 @@
     height: 18px;
     grid-area: button;
     border: 1px solid rgba(255, 255, 255, 1);
-    width: 18px;
-    height: 18px;
-    top: 280px;
-    left: 268px;
   }
 
   .profile__edit-button:hover {
@@ -159,6 +157,6 @@
     border-radius: 50%;
     object-fit: cover;
     background-position: center;
-    margin: 0;
+    margin: 0 0 30px 0;
   }
 }
