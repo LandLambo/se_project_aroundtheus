@@ -1,5 +1,5 @@
 .header {
-  margin-top: 41px;
+  margin-top: 45px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
   padding-bottom: 40px;
 }
@@ -11,13 +11,13 @@
 
 @media screen and (max-width: 620px) {
   .header {
-    padding-bottom: 42px;
+    padding-bottom: 32px;
     border-bottom: 1px solid rgba(84, 84, 84, 1);
-    margin-top: 32px;
+    margin-top: 28px;
   }
 
   .header__image {
-    width: 126px;
-    height: 24px;
+    max-width: 126px;
+    margin-left: 27px;
   }
 }
