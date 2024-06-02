@@ -9,6 +9,7 @@
   grid-template-areas: "title button" "description description";
   grid-template-columns: minmax(auto, 375px) auto;
   align-items: center;
+  column-gap: 18px;
 }
 
 .profile__edit-button {
@@ -86,6 +87,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    column-gap: 10px;
   }
   .profile__description {
     width: 100%;
