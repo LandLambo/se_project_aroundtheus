@@ -12,7 +12,6 @@
 @media screen and (max-width: 620px) {
   .header {
     padding-bottom: 32px;
-    border-bottom: 1px solid rgba(84, 84, 84, 1);
     margin-top: 28px;
   }
 
