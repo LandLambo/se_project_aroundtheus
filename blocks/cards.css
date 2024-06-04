@@ -17,9 +17,6 @@
   }
 
   .cards__list {
-    margin: 0px;
     grid-gap: 20px 19px;
-    padding: 0;
-    margin: 0;
   }
 }
