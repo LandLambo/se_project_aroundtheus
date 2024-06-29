@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.form__input {
+.modal__form-input {
   font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -20,12 +20,12 @@
   outline: none;
 }
 
-.form__input-title {
+.modal__form-input-title {
   margin-top: 54px;
   margin-bottom: 29.74px;
 }
 
-.form__input-description {
+.modal__form-input-description {
   margin-bottom: 48px;
 }
 
@@ -49,16 +49,16 @@
 }
 
 @media screen and (max-width: 620px) {
-  .form__input {
+  .modal__form-input {
     padding-bottom: 13px;
   }
 
-  .form__input-title {
+  .modal__form-input-title {
     margin-top: 75px;
     margin-bottom: 30px;
   }
 
-  .form__input-description {
+  .modal__form-input-description {
     margin-bottom: 45px;
   }
 
