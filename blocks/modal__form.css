@@ -20,7 +20,7 @@
   outline: none;
 }
 
-.modal__form-input-title {
+.modal__form-input-name {
   margin-top: 54px;
   margin-bottom: 29.74px;
 }
@@ -53,12 +53,12 @@
     padding-bottom: 13px;
   }
 
-  .modal__form-input-title {
+  .modal__form-input-name {
     margin-top: 75px;
     margin-bottom: 30px;
   }
 
-  .modal__form-input-url {
+  .modal__form-input-description {
     margin-bottom: 45px;
   }
 
