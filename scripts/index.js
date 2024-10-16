@@ -61,8 +61,6 @@ function closePopup() {
 function renderCard(cardData, cardListWrapper) {
   const cardElement = getCardElement(cardData);
   cardListWrapper.prepend(cardElement);
-
-  
 }
 
 function getCardElement(cardData) {
@@ -70,9 +68,14 @@ function getCardElement(cardData) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".delete__Button");
 
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
+  });
+
+  deleteButton.addEventListener("click", () => {
+    deleteButton.classList.toggle("delete__Button");
   });
 
   cardTitleEl.textContent = cardData.name;
@@ -95,7 +98,7 @@ function handleAddButtonSubmit(e) {
   e.preventDefault();
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
- renderCard({name,link},cardListEl )
+  renderCard({ name, link }, cardListEl);
   closePopup(addCardModal);
 }
 //Event Listerners//
@@ -117,4 +120,4 @@ addNewCardButton.addEventListener("click", () => {
   addCardModal.classList.add("modal_opened");
 });
 
-initialCards.forEach((cardData) => renderCard{cardData, cardListEl});
+initialCards.forEach((cardData) => renderCard(cardData, cardListEl));

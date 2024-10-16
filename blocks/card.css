@@ -50,3 +50,13 @@
   opacity: 50%;
   cursor: pointer;
 }
+
+.delete__Button {
+  background: transparent url("../images/Trash.svg") center no-repeat;
+  position: absolute;
+}
+
+.delete__Button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
