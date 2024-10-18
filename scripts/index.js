@@ -83,10 +83,9 @@ function getCardElement(cardData) {
   });
 
   //previewImageModal
-  cardImageEl.addEventListener("click", () => {(
+  cardImageEl.addEventListener("click", () => {
     previewImageModal.classList.add("modal_opened");
-  );
-   });
+  });
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
