@@ -5,6 +5,7 @@
   overflow: hidden;
   border-radius: 10px;
   width: 282px;
+  position: relative;
 }
 
 .card__title {
@@ -57,7 +58,6 @@
   background-size: cover;
   width: 18px;
   height: 19.3px;
-  position: absolute;
   top: 18px;
   right: 15px;
   border: none;

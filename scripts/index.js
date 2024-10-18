@@ -75,7 +75,12 @@ function getCardElement(cardData) {
   });
 
   deleteButton.addEventListener("click", () => {
-    deleteButton.classList.toggle("card__delete-Button");
+    cardElement.remove();
+  });
+
+  cardImageEl.addEventListener("click", () => {(
+    
+  );
   });
 
   cardTitleEl.textContent = cardData.name;
