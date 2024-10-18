@@ -78,10 +78,10 @@ function getCardElement(cardData) {
     cardElement.remove();
   });
 
-  cardImageEl.addEventListener("click", () => {(
-    
-  );
-  });
+  // cardImageEl.addEventListener("click", () => {(
+
+  // );
+  // });
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
