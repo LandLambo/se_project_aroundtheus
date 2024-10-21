@@ -51,7 +51,7 @@
     </div>
 
     <!--Edit card modal-->
-    <div class="modal preview__Image-Modal" id="profile-edit-modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
           class="modal__close"
@@ -106,6 +106,23 @@
         </form>
       </div>
     </div>
+
+    <!-- Preview image -->
+    <div class="modal" id="add-card-modal" style="display: flex">
+      <div class="modal__container modal__content_type_preview">
+        <button
+          class="modal__close"
+          type="button"
+          id="add_modal-close-button"
+        ></button>
+        <img
+          class="preview__Image-Modal"
+          src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
