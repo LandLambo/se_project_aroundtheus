@@ -40,9 +40,9 @@ const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const addCardModal = document.querySelector("#add-card-modal");
 
-// previe Image
+// preview Image
 
-const previewImageModal = document.querySelector("#preview__Image-Modal");
+const previewImageModal = document.querySelector(".preview__Image-Modal");
 
 //Form Data//
 const profileTitleInput = document.querySelector("#modal__form-input-name");
@@ -83,6 +83,7 @@ function getCardElement(cardData) {
   });
 
   //previewImageModal
+
   cardImageEl.addEventListener("click", () => {
     previewImageModal.classList.add("modal_opened");
   });
