@@ -1,0 +1,13 @@
+.preview__popup_container {
+  padding: 16px;
+  padding: 0;
+  position: relative;
+}
+
+.preview__popup_image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  overflow: hidden;
+}
