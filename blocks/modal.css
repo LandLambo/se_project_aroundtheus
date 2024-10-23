@@ -8,17 +8,16 @@
   z-index: 999;
   padding: 0 19px;
   color: black;
-  /* display: none; */
+  display: flex;
   align-items: center;
   justify-content: center;
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0.3s, opacity 0.5s linear;
 }
 
 .modal_opened {
-  display: flex;
   visibility: visible;
   pointer-events: all;
   opacity: 1;

@@ -1,13 +1,24 @@
-.preview__popup_container {
+.modal__preview_container {
   padding: 16px;
   padding: 0;
   position: relative;
 }
 
-.preview__popup_image {
+.modal__preview_image {
   max-width: 80vw;
   max-height: 80vh;
   object-fit: contain;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.modal__caption {
+  font-family: "Inter", Arial, sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  width: 240px;
+  height: 12px;
 }

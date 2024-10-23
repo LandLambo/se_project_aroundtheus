@@ -30,22 +30,23 @@ const cardTemplate =
 
 //Buttons and other DOM nodes//
 const profileEditButton = document.querySelector("#profile-edit-button");
-const profileEditModal = document.querySelector("#profile-edit-modal");
+const profileEditModal = document.querySelector("#modal__profile-edit");
 const modalCloseButton = document.querySelector("#modal-close-button");
-const addModalCloseButton = document.querySelector("#add_modal-close-button");
+const addModalCloseButton = document.querySelector("#modal__add-close-button");
 const previewPopUpCloseButton = document.querySelector(
-  "#preview_popup-close-button"
+  "#modal__preview-close-button"
 );
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 
 //Add New Card
 const addNewCardButton = document.querySelector(".profile__add-button");
-const addCardModal = document.querySelector("#add-card-modal");
+const addCardModal = document.querySelector("#modal__add-card");
 
 // preview Image
-const previewImagePopup = document.querySelector("#js-preview-popup");
-const previewImageElement = document.querySelector(".preview__popup_image");
+const previewImagePopup = document.querySelector("#modal-preview-popup");
+const previewImageElement = document.querySelector(".modal__preview_image");
+const previewPopUpCaption = document.querySelector(".modal__caption");
 
 //Form Data//
 const profileTitleInput = document.querySelector("#modal__form-input-name");
@@ -89,16 +90,15 @@ function getCardElement(cardData) {
   //previewImagePopup
 
   cardImageEl.addEventListener("click", () => {
+    previewImageElement.src = cardData.link;
+    previewImageElement.alt = cardData.name;
+    previewPopUpCaption.textContent = cardData.name;
     previewImagePopup.classList.add("modal_opened");
   });
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
-
-  cardImageEl.addEventListener("click", () => {
-    previewImageElement.src = cardData.link;
-  });
 
   return cardElement;
 }
