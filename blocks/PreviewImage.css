@@ -1,10 +1,10 @@
-.modal__preview_container {
+.modal__preview-container {
   padding: 16px;
   padding: 0;
   position: relative;
 }
 
-.modal__preview_image {
+.modal__preview-image {
   max-width: 80vw;
   max-height: 80vh;
   object-fit: contain;
