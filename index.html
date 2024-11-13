@@ -66,15 +66,29 @@
             name="name"
             id="modal__form-input-name"
             placeholder="Name"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span class="modal__error" id="modal__form-input-name-error"></span>
           <input
             class="modal__form-input-description modal__form-input"
             type="text"
             name="description"
             id="modal__form-input-description"
             placeholder="Description"
+            minlength="2"
+            maxlength="200"
+            required
           />
-          <button class="modal__button">Save</button>
+          <span
+            class="modal__error"
+            id="modal__form-input-description-error"
+          ></span>
+
+          <button class="modal__button modal__button_disabled" disabled>
+            Save
+          </button>
         </form>
       </div>
     </div>
@@ -102,7 +116,9 @@
             id="modal__form-input-url"
             placeholder="Image URL"
           />
-          <button class="modal__button">Create</button>
+          <button class="modal__button modal__button_disabled" disabled>
+            Create
+          </button>
         </form>
       </div>
     </div>
