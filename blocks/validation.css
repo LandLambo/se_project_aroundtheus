@@ -1,4 +1,4 @@
-/* .modal__error_visible {
+.modal__error {
   position: absolute;
   font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
@@ -7,4 +7,4 @@
   left: 0;
   top: calc(100% + 5px);
   color: #ff0000;
-} */
+}

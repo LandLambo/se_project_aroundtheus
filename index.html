@@ -60,32 +60,35 @@
         ></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form">
-          <input
-            class="modal__form-input-name modal__form-input"
-            type="text"
-            name="name"
-            id="modal__form-input-name"
-            placeholder="Name"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <span class="modal__error" id="modal__form-input-name-error"></span>
-          <input
-            class="modal__form-input-description modal__form-input"
-            type="text"
-            name="description"
-            id="modal__form-input-description"
-            placeholder="Description"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span
-            class="modal__error"
-            id="modal__form-input-description-error"
-          ></span>
-
+          <label class="modal__label">
+            <input
+              class="modal__form-input-name modal__form-input modal__input_type_error"
+              type="text"
+              name="name"
+              id="modal__form-input-name"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="modal__error" id="modal__form-input-name-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__form-input-description modal__form-input"
+              type="text"
+              name="description"
+              id="modal__form-input-description"
+              placeholder="Description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              class="modal__error"
+              id="modal__form-input-description-error"
+            ></span>
+          </label>
           <button class="modal__button modal__button_disabled" disabled>
             Save
           </button>
@@ -103,19 +106,31 @@
         ></button>
         <p class="modal__heading">New Place</p>
         <form class="modal__form">
-          <input
-            class="modal__form-input-title modal__form-input"
-            type="text"
-            name="title"
-            placeholder="Title"
-          />
-          <input
-            class="modal__form-input-url modal__form-input"
-            type="text"
-            name="url"
-            id="modal__form-input-url"
-            placeholder="Image URL"
-          />
+          <label class="modal__label">
+            <input
+              class="modal__form-input-title modal__form-input"
+              type="text"
+              name="title"
+              id="modal__form-input-title"
+              placeholder="Title"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+            <span
+              class="modal__error"
+              id="modal__form-input-title-error"
+            ></span>
+            <input
+              class="modal__form-input-url modal__form-input"
+              type="url"
+              name="url"
+              id="modal__form-input-url"
+              placeholder="Image URL"
+              required
+            />
+            <span class="modal__error" id="modal__form-input-url-error"></span>
+          </label>
           <button class="modal__button modal__button_disabled" disabled>
             Create
           </button>

@@ -10,7 +10,7 @@ function showInputError(
     `#${inputElement.id}-error`
   );
   inputElement.classList.add(inputErrorClass);
-  errorMessageElement.textcontent = inputElement.validationMessage;
+  errorMessageElement.textContent = inputElement.validationMessage;
   errorMessageElement.classList.add(errorClass);
 }
 
@@ -23,7 +23,7 @@ function hideInputError(
     `#${inputElement.id}-error`
   );
   inputElement.classList.remove(inputErrorClass);
-  errorMessageElement.textcontent = "";
+  errorMessageElement.textContent = "";
   errorMessageElement.classList.remove(errorClass);
 }
 
@@ -59,7 +59,7 @@ function setEventListerners(formElement, options) {
   inputElements.forEach((inputElement) => {
     inputElement.addEventListener("input", (e) => {
       checkInputValidity(formElement, inputElement, options);
-      toggleButtonState(inputElement, submitButton, options);
+      toggleButtonState(inputElements, submitButton, options);
     });
   });
 }
