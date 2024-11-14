@@ -66,10 +66,20 @@ const cardUrlInput = addModalform.querySelector(".modal__form-input-url");
 // Correction
 function openPopup(popup) {
   popup.classList.add("modal_opened");
+  popup.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal_opened")) {
+      closePopup(popup);
+    }
+  });
 }
 
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
+  popup.removeEventListener("click", (event) => {
+    if (event.target.classList.contains("modal_opened")) {
+      closePopup(popup);
+    }
+  });
 }
 
 function renderCard(cardData, cardListWrapper) {

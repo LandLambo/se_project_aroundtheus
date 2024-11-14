@@ -106,6 +106,26 @@
   cursor: pointer;
   opacity: 80%;
 }
+.modal__error {
+  position: absolute;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  left: 0;
+  top: calc(100% + 5px);
+  color: #ff0000;
+}
+
+.modal__button_disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.modal__input_type_error {
+  border-bottom-color: #ff0000;
+}
+
 @media screen and (max-width: 620px) {
   .modal__form-input {
     padding-bottom: 13px;
