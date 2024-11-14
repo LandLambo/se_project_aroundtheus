@@ -8,3 +8,12 @@
   top: calc(100% + 5px);
   color: #ff0000;
 }
+
+.modal__button_disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.modal__input_type_error {
+  border-bottom-color: #ff0000;
+}
