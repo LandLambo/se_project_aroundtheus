@@ -59,7 +59,7 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 const addModalform = addCardModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
 const cardTitleInput = addModalform.querySelector(".modal__form-input-title");
-const cardUrlInput = addModalform.querySelector(".modal__form-input-url");
+const cardUrlInput = addModalform.querySelector("#modal__form-input-url");
 
 //Function//
 
@@ -85,18 +85,18 @@ function closePopup(popup) {
 //ESC button
 function openPopup(popup) {
   popup.classList.add("modal_opened");
-  document.addEventListener("keydown", closePopup);
+  document.addEventListener("keydown", closePopupByEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
-  document.removeEventListener("keydown", closePopup);
+  document.removeEventListener("keydown", closePopupByEscape);
 }
 
-function closePopup(evt) {
+function closePopupByEscape(evt) {
   if (evt.key === "Escape") {
     const popup = document.querySelector(".modal_opened");
-    closeModal(popup);
+    closePopup(popup);
   }
 }
 
