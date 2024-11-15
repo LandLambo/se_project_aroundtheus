@@ -83,14 +83,22 @@ function closePopup(popup) {
 }
 
 //ESC button
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    const openPopup = document.querySelector(".modal_opened");
-    if (openPopup) {
-      closePopup(openPopup);
-    }
+function openPopup(popup) {
+  popup.classList.add("modal_opened");
+  document.addEventListener("keydown", closePopup);
+}
+
+function closePopup(popup) {
+  popup.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closePopup);
+}
+
+function closePopup(evt) {
+  if (evt.key === "Escape") {
+    const popup = document.querySelector(".modal_opened");
+    closeModal(popup);
   }
-});
+}
 
 function renderCard(cardData, cardListWrapper) {
   const cardElement = getCardElement(cardData);
