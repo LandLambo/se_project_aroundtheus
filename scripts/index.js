@@ -82,6 +82,16 @@ function closePopup(popup) {
   });
 }
 
+//ESC button
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const openPopup = document.querySelector(".modal_opened");
+    if (openPopup) {
+      closePopup(openPopup);
+    }
+  }
+});
+
 function renderCard(cardData, cardListWrapper) {
   const cardElement = getCardElement(cardData);
   cardListWrapper.prepend(cardElement);
