@@ -61,27 +61,19 @@ const cardListEl = document.querySelector(".cards__list");
 const cardTitleInput = addModalform.querySelector(".modal__form-input-title");
 const cardUrlInput = addModalform.querySelector("#modal__form-input-url");
 
-//Function//
-
-// Correction
-function openPopup(popup) {
-  popup.classList.add("modal_opened");
-  popup.addEventListener("click", (event) => {
-    if (event.target.classList.contains("modal_opened")) {
-      closePopup(popup);
-    }
-  });
-}
-
-function closePopup(popup) {
-  popup.classList.remove("modal_opened");
-  popup.removeEventListener("click", (event) => {
-    if (event.target.classList.contains("modal_opened")) {
-      closePopup(popup);
-    }
-  });
-}
-
+//close popup by pressing screen
+const modals = document.querySelectorAll(".modal");
+const handlePopupClose = (evt) => {
+  if (
+    evt.target.classList.contains("modal") ||
+    evt.target.classList.contains("modal__close")
+  ) {
+    closePopup(evt.currentTarget);
+  }
+};
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", handlePopupClose);
+});
 //ESC button
 function openPopup(popup) {
   popup.classList.add("modal_opened");
