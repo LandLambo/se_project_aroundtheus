@@ -1,3 +1,5 @@
+import FormValidator from "./FormValidator.js";
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -90,6 +92,24 @@ function renderCard(cardData, cardListWrapper) {
   const cardElement = getCardElement(cardData);
   cardListWrapper.prepend(cardElement);
 }
+
+// Validation
+const validationSettings = {
+  inputSelector: ".modal__form-input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormElement = profileEditModal.querySelector(".modal__form");
+const addFormElement = addCardModal.querySelector(".modal__form");
+
+const editFormValidator = new FormValidator(
+  validationSettings,
+  editFormElement
+);
+const addFormValidator = new FormValidator(validationSettings, addFormElement);
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
