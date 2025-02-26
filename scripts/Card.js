@@ -47,9 +47,7 @@ class Card {
 
     this._image = this._cardElement.querySelector(".card__image");
     this._image.src = this._link;
-    this._description = this._cardElement.querySelector(".card__image");
-    this._description.alt = this._name;
-
+    this._image.alt = this._name;
     this._setEventListiners();
 
     return this._cardElement;
