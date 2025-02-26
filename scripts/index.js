@@ -1,4 +1,5 @@
 import FormValidator from "./FormValidator.js";
+import Card from "./Card.js";
 
 const initialCards = [
   {
@@ -45,6 +46,7 @@ const addCardModal = document.querySelector("#modal__add-card");
 const previewImagePopup = document.querySelector("#modal__preview-popup");
 const previewImageElement = document.querySelector(".modal__preview-image");
 const previewPopUpCaption = document.querySelector(".modal__caption");
+const cardSelector = "#card__template";
 
 //Form Data//
 const profileTitleInput = document.querySelector("#modal__form-input-name");
@@ -89,8 +91,9 @@ function closePopupByEscape(evt) {
 }
 
 function renderCard(cardData, cardListWrapper) {
+  const card = new Card(cardData, cardSelector);
   const cardElement = getCardElement(cardData);
-  cardListWrapper.prepend(cardElement);
+  cardListWrapper.prepend(card.getView());
 }
 
 // Validation
@@ -118,22 +121,49 @@ function getCardElement(cardData) {
   const likeButton = cardElement.querySelector(".card__like-button");
   const deleteButton = cardElement.querySelector(".card__delete-Button");
 
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__like-button_active");
-  });
+  //Like Test
 
-  deleteButton.addEventListener("click", () => {
-    cardElement.remove();
-  });
+  const handleLikeButton = (evt) => {
+    evt.target.classList.toggle("card__like-button_active");
+  };
+
+  likeButton.addEventListener("click", handleLikeButton);
+
+  // likeButton.addEventListener("click", () => {
+  //   likeButton.classList.toggle("card__like-button_active");
+  // });
+
+  //delete test
+
+  const handleDeleteButton = (evt) => {
+    evt.target.classList.cardElement.remove();
+  };
+
+  deleteButton.addEventListener("click", handleDeleteButton);
+
+  // deleteButton.addEventListener("click", () => {
+  //   cardElement.remove();
+  // });
 
   //previewImagePopup
 
-  cardImageEl.addEventListener("click", () => {
-    previewImageElement.src = cardData.link;
+  //Class Image Test
+
+  const handleCardImageEL = (cardData) => {
+    evt.target.classList.previewImageElement.src = cardData.link;
     previewImageElement.alt = cardData.name;
     previewPopUpCaption.textContent = cardData.name;
     openPopup(previewImagePopup);
-  });
+  };
+
+  cardImageEl.addEventListener("click", () => handleCardImageEL(cardData));
+
+  // cardImageEl.addEventListener("click", () => {
+  // previewImageElement.src = cardData.link;
+  // previewImageElement.alt = cardData.name;
+  // previewPopUpCaption.textContent = cardData.name;
+  // openPopup(previewImagePopup);
+  // });
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
