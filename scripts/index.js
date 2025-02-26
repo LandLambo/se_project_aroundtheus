@@ -92,7 +92,7 @@ function closePopupByEscape(evt) {
 
 function renderCard(cardData, cardListWrapper) {
   const card = new Card(cardData, cardSelector);
-  const cardElement = getCardElement(cardData);
+  //const cardElement = getCardElement(cardData);
   cardListWrapper.prepend(card.getView());
 }
 
