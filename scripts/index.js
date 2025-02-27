@@ -129,10 +129,6 @@ function getCardElement(cardData) {
 
   likeButton.addEventListener("click", handleLikeButton);
 
-  // likeButton.addEventListener("click", () => {
-  //   likeButton.classList.toggle("card__like-button_active");
-  // });
-
   //delete test
 
   const handleDeleteButton = (evt) => {
@@ -140,10 +136,6 @@ function getCardElement(cardData) {
   };
 
   deleteButton.addEventListener("click", handleDeleteButton);
-
-  // deleteButton.addEventListener("click", () => {
-  //   cardElement.remove();
-  // });
 
   //previewImagePopup
 
@@ -157,13 +149,6 @@ function getCardElement(cardData) {
   };
 
   cardImageEl.addEventListener("click", () => handleCardImageEL(cardData));
-
-  // cardImageEl.addEventListener("click", () => {
-  // previewImageElement.src = cardData.link;
-  // previewImageElement.alt = cardData.name;
-  // previewPopUpCaption.textContent = cardData.name;
-  // openPopup(previewImagePopup);
-  // });
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
