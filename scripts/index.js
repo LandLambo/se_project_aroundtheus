@@ -91,7 +91,7 @@ function closePopupByEscape(evt) {
 }
 
 function renderCard(cardData, cardListWrapper) {
-  const card = new Card(cardData, cardSelector);
+  const card = new Card(cardData, cardSelector, handleImageClick);
   cardListWrapper.prepend(card.getView());
 }
 
@@ -140,12 +140,12 @@ function getCardElement(cardData) {
 
   //Class Image Test
 
-  const handleCardImageEL = (cardData) => {
-    evt.target.classList.previewImageElement.src = cardData.link;
-    previewImageElement.alt = cardData.name;
-    previewPopUpCaption.textContent = cardData.name;
-    openPopup(previewImagePopup);
-  };
+  // const handleCardImageEL = (cardData) => {
+  //   evt.target.classList.previewImageElement.src = cardData.link;
+  //   previewImageElement.alt = cardData.name;
+  //   previewPopUpCaption.textContent = cardData.name;
+  //   openPopup(previewImagePopup);
+  // };
 
   cardImageEl.addEventListener("click", () => handleCardImageEL(cardData));
 
@@ -157,6 +157,13 @@ function getCardElement(cardData) {
 }
 
 //Event Handlers//
+
+function handleImageClick(name, link) {
+  previewImageElement.src = link;
+  previewImageElement.alt = name;
+  previewPopUpCaption.textContent = name;
+  openPopup(previewImagePopup);
+}
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -173,6 +180,7 @@ function handleAddButtonSubmit(e) {
   renderCard({ name, link }, cardListEl);
   e.target.reset();
   closePopup(addCardModal);
+  // disable the submit button
 }
 
 profileEditButton.addEventListener("click", () => {
