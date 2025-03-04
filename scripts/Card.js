@@ -31,13 +31,13 @@ class Card {
     this._cardElement.remove();
   }
 
-  _handleCardImageEL() {
-    this._cardElement
-      .querySelector(".card__image")
-      .addEventListener("click", () => {
-        this._handleLikeButton();
-      });
-  }
+  // _handleCardImageEL() {
+  //   this._cardElement
+  //     .querySelector(".card__image")
+  //     .addEventListener("click", () => {
+  //       this._handleLikeButton();
+  //     });
+  // }
 
   getView() {
     this._cardElement = document
