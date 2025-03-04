@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.card__delete-Button {
+.card__delete-button {
   background: transparent url("../images/Trash.svg") center no-repeat;
   position: absolute;
   background-size: cover;
@@ -63,7 +63,7 @@
   border: none;
 }
 
-.card__delete-Button:hover {
+.card__delete-button:hover {
   opacity: 50%;
   cursor: pointer;
 }

@@ -6,14 +6,14 @@ class Card {
     this._cardSelector = cardSelector;
   }
 
-  _setEventListiners() {
+  _setEventListeners() {
     //card__like-button//
     this._cardElement
       .querySelector(".card__like-button")
       .addEventListener("click", () => this._handleLikeButton());
-    //card__delete-Button//
+    //card__delete-button//
     this._cardElement
-      .querySelector(".card__delete-Button")
+      .querySelector(".card__delete-button")
       .addEventListener("click", () => this._handleDeleteButton());
     //card__image//
     this._cardElement
@@ -34,7 +34,7 @@ class Card {
   _handleCardImageEL() {
     this._cardElement
       .querySelector(".card__image")
-      .addEventListiner("click", () => {
+      .addEventListener("click", () => {
         this._handleLikeButton();
       });
   }
@@ -49,7 +49,7 @@ class Card {
     this._image.src = this._link;
     this._description = this._cardElement.querySelector(".card__title");
     this._description.textContent = this._name;
-    this._setEventListiners();
+    this._setEventListeners();
 
     return this._cardElement;
   }

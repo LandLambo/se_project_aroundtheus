@@ -92,7 +92,6 @@ function closePopupByEscape(evt) {
 
 function renderCard(cardData, cardListWrapper) {
   const card = new Card(cardData, cardSelector);
-  //const cardElement = getCardElement(cardData);
   cardListWrapper.prepend(card.getView());
 }
 
@@ -119,7 +118,7 @@ function getCardElement(cardData) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__like-button");
-  const deleteButton = cardElement.querySelector(".card__delete-Button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
 
   //Like Test
 
