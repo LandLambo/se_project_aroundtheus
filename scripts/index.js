@@ -111,6 +111,7 @@ const editFormValidator = new FormValidator(
   validationSettings,
   editFormElement
 );
+editFormValidator.enableValidation();
 const addFormValidator = new FormValidator(validationSettings, addFormElement);
 
 function getCardElement(cardData) {
