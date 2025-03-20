@@ -23,6 +23,15 @@ class Card {
       );
   }
 
+  _handleAddButtonSubmit(e) {
+    e.preventDefault();
+    this._name = cardTitleInput.value;
+    this._link = cardUrlInput.value;
+    renderCard(this._name, this._link, cardListEl);
+    e.target.reset();
+    closePopup(addCardModal);
+  }
+
   _handleLikeButton() {
     this._cardElement
       .querySelector(".card__like-button")

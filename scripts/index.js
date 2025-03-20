@@ -111,8 +111,9 @@ const editFormValidator = new FormValidator(
   validationSettings,
   editFormElement
 );
-editFormValidator.enableValidation();
 const addFormValidator = new FormValidator(validationSettings, addFormElement);
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -181,7 +182,6 @@ function handleAddButtonSubmit(e) {
   renderCard({ name, link }, cardListEl);
   e.target.reset();
   closePopup(addCardModal);
-  // disable the submit button
 }
 
 profileEditButton.addEventListener("click", () => {
