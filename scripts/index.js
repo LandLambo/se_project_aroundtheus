@@ -90,9 +90,14 @@ function closePopupByEscape(evt) {
   }
 }
 
-function renderCard(cardData, cardListWrapper) {
-  const card = new Card(cardData, cardSelector, handleImageClick);
-  cardListWrapper.prepend(card.getView());
+function createCard(item) {
+  const cardElement = new Card(item, cardSelector, handleImageClick);
+  return cardElement.getView();
+}
+
+function renderCard(item, cardListWrapper) {
+  const card = createCard(item);
+  cardListWrapper.prepend(card);
 }
 
 // Validation
@@ -104,59 +109,15 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-const editFormElement = profileEditModal.querySelector(".modal__form");
-const addFormElement = addCardModal.querySelector(".modal__form");
-
 const editFormValidator = new FormValidator(
   validationSettings,
-  editFormElement
+  profileEditForm
 );
-const addFormValidator = new FormValidator(validationSettings, addFormElement);
+const addFormValidator = new FormValidator(validationSettings, addModalForm);
+
+// Enable validation
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
-
-function getCardElement(cardData) {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
-  const likeButton = cardElement.querySelector(".card__like-button");
-  const deleteButton = cardElement.querySelector(".card__delete-button");
-
-  //Like Test
-
-  const handleLikeButton = (evt) => {
-    evt.target.classList.toggle("card__like-button_active");
-  };
-
-  likeButton.addEventListener("click", handleLikeButton);
-
-  //delete test
-
-  const handleDeleteButton = (evt) => {
-    evt.target.classList.cardElement.remove();
-  };
-
-  deleteButton.addEventListener("click", handleDeleteButton);
-
-  //previewImagePopup
-
-  //Class Image Test
-
-  // const handleCardImageEL = (cardData) => {
-  //   evt.target.classList.previewImageElement.src = cardData.link;
-  //   previewImageElement.alt = cardData.name;
-  //   previewPopUpCaption.textContent = cardData.name;
-  //   openPopup(previewImagePopup);
-  // };
-
-  cardImageEl.addEventListener("click", () => handleCardImageEL(cardData));
-
-  cardTitleEl.textContent = cardData.name;
-  cardImageEl.alt = cardData.name;
-  cardImageEl.src = cardData.link;
-
-  return cardElement;
-}
 
 //Event Handlers//
 
@@ -172,6 +133,7 @@ function handleProfileEditSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   e.target.reset();
+  addFormValidator.toggleButtonState();
   closePopup(profileEditModal);
 }
 
@@ -198,4 +160,4 @@ addNewCardButton.addEventListener("click", () => {
   openPopup(addCardModal);
 });
 
-initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
+initialCards.forEach((item) => renderCard(item, cardListEl));

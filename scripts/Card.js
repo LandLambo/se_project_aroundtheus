@@ -8,46 +8,27 @@ class Card {
 
   _setEventListeners() {
     //card__like-button//
-    this._cardElement
-      .querySelector(".card__like-button")
-      .addEventListener("click", () => this._handleLikeButton());
+    this._cardElement;
+    this._likeButton.addEventListener("click", () => this._handleLikeButton());
     //card__delete-button//
-    this._cardElement
-      .querySelector(".card__delete-button")
-      .addEventListener("click", () => this._handleDeleteButton());
+    this._cardElement;
+    this._deleteButton.addEventListener("click", () =>
+      this._handleDeleteButton()
+    );
     //card__image//
-    this._cardElement
-      .querySelector(".card__image")
-      .addEventListener("click", () =>
-        this._handleImageClick(this._name, this._link)
-      );
-  }
-
-  _handleAddButtonSubmit(e) {
-    e.preventDefault();
-    this._name = cardTitleInput.value;
-    this._link = cardUrlInput.value;
-    renderCard(this._name, this._link, cardListEl);
-    e.target.reset();
-    closePopup(addCardModal);
+    this._cardElement;
+    this._image.addEventListener("click", () =>
+      this._handleImageClick(this._name, this._link)
+    );
   }
 
   _handleLikeButton() {
-    this._cardElement
-      .querySelector(".card__like-button")
-      .classList.toggle("card__like-button_active");
+    this._cardElement;
+    this._likeButton.classList.toggle("card__like-button_active");
   }
 
   _handleDeleteButton() {
     this._cardElement.remove();
-  }
-
-  _handleCardImageEL() {
-    this._cardElement
-      .querySelector(".card__image")
-      .addEventListener("click", () => {
-        this._handleLikeButton();
-      });
   }
 
   getView() {
@@ -58,8 +39,16 @@ class Card {
 
     this._image = this._cardElement.querySelector(".card__image");
     this._image.src = this._link;
+    this._image.alt = this._name;
+
     this._description = this._cardElement.querySelector(".card__title");
     this._description.textContent = this._name;
+
+    this._likeButton = this._cardElement.querySelector(".card__like-button");
+    this._deleteButton = this._cardElement.querySelector(
+      ".card__delete-button"
+    );
+
     this._setEventListeners();
 
     return this._cardElement;
