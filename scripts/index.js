@@ -133,7 +133,6 @@ function handleProfileEditSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   e.target.reset();
-  addFormValidator.toggleButtonState();
   closePopup(profileEditModal);
 }
 
@@ -143,6 +142,8 @@ function handleAddButtonSubmit(e) {
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardListEl);
   e.target.reset();
+  addFormValidator.toggleButtonState();
+
   closePopup(addCardModal);
 }
 

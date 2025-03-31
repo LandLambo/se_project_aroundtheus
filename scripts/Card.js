@@ -8,15 +8,12 @@ class Card {
 
   _setEventListeners() {
     //card__like-button//
-    this._cardElement;
     this._likeButton.addEventListener("click", () => this._handleLikeButton());
     //card__delete-button//
-    this._cardElement;
     this._deleteButton.addEventListener("click", () =>
       this._handleDeleteButton()
     );
     //card__image//
-    this._cardElement;
     this._image.addEventListener("click", () =>
       this._handleImageClick(this._name, this._link)
     );
