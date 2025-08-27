@@ -24,6 +24,8 @@ Good luck and have fun!
 
 se_project_aroundtheus
 
+-[link to GitHub] (https://github.com/LandLambo/se_project_aroundtheus.git)
+
 **project descripition**
 
 This was my project 3 assingment, in the project we had to create a websitefrom scratch, we created cards using flex direction and using grid. I also used media queries for the first time.
